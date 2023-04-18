@@ -1,8 +1,9 @@
-populate postgres database with osm data:
+populate postgres database with osm data:<br>
 osm2pgsql -c -d osm -U postgres -W -H localhost czech-republic-latest.osm.pbf
 
-[main.py](main.py) does this:
+[main.py](main.py) does this:<br>
+(every house in czechia with the house number 3)
 
-![map](https://user-images.githubusercontent.com/24635770/232729541-d06f9153-d457-4ac5-b8f4-9639af4e27c1.png)
+![map](https://user-images.githubusercontent.com/24635770/232731933-cf5555f8-ef5d-4414-994e-e58983807792.png)
 
 [main.cpp](main.cpp) does less but without libraries
