@@ -43,7 +43,7 @@ num = 3
 
 
 # QUERY 
-with psycopg2.connect(database='osm', user='postgres', password='fuckme', host='localhost') as conn:
+with psycopg2.connect(database='osm', user='postgres', password='password', host='localhost') as conn:
   cur = conn.cursor()
   #cur = conn.cursor(cursor_factory=NamedTupleCursor)
 
@@ -52,21 +52,4 @@ rows = cur.fetchall()
 print(f"found {len(rows)} results")
 showpoint(rows)
 
-
-
 plt.show()
-
-
-
-
-
-
-
-
-
-#cur.execute("""SELECT * FROM planet_osm_point where "addr:housenumber" IS NOT NULL limit 100""")
-#cur.execute("""SELECT * FROM planet_osm_point where "addr:housenumber"='210' limit 10000""")
-#cur.execute("""SELECT way FROM planet_osm_point where amenity='pub'""")
-
-#cur.execute(f"""SELECT way FROM planet_osm_polygon where boundary='administrative' and  admin_level='2'""")
-#cur.execute(f"""SELECT way FROM planet_osm_polygon limit 1""")
